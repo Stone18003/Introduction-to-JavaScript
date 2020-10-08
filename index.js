@@ -17,8 +17,8 @@ Do the following:
 
    HINT: no function required
 */
-const votingAge = 22;
-if (votingAge >= 18) {
+const votingAge = 22; // sets votingAge to 22 
+if (votingAge >= 18) { //  votingAge has to be greater than or equal to 18 to be true, or else it will be false
     console.log(true);
 }
 
@@ -34,7 +34,7 @@ Do the following:
 */
 let variable1 = 1;
 let variable2 = 2;
-if (variable2 === 2) {
+if (variable2 === 2) { // since variable2 does equal 2, the new value for variable1 will be logged
     variable1 = 3;
     console.log(variable1);
 }
@@ -51,7 +51,7 @@ Do the following:
    HINT: look up the Number method
 */
 let stringValue = '1999';
-let numValue = parseInt(stringValue);
+let numValue = parseInt(stringValue, 10); // best practice is to always pass the radix, decimal system uses a radix of 10
 if (numValue === 1999) {
     console.log(numValue)
 } else {
@@ -228,11 +228,12 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number) {
     return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`;
-    //while (number > 0) {
+    /*
+    while (number > 0) {
     console.log(`${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`);
-    //number = number - 1;
-    //number--;
-    //}
+    number--; // decreases number 1
+    }
+    */
 
 }
 console.log(annoyingSong(5));
@@ -289,7 +290,7 @@ function vowelCounter(word) {
     let count = 0;
     for (let index = 0; index < lowerWord.length; index++) {
         const lowerLetter = lowerWord[index];
-        if (lowerVowels.indexOf(lowerLetter) > -1) {
+        if (lowerVowels.includes(lowerLetter)) {
             count++;
         }
 
@@ -297,8 +298,14 @@ function vowelCounter(word) {
     return count;
 }
 console.log(vowelCounter('cool sEntEncE'));
-
-
+/*
+let myArray = ['H', 'E', 'L', 'L', 'O'];
+let myString = 'HELLO';
+let myNumber = 12345;
+console.log(myArray[1]);
+console.log(myString[1]);
+console.log(myNumber[1]); // this should error out because numbers don't have index accessors.
+*/
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo() {
     console.log('its working');
